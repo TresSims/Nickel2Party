@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlbfwvh1j6pju"]
+
+[ext_resource type="PackedScene" uid="uid://btti8lad77gee" path="res://pawn/BasicPawn.tscn" id="1_ghv0i"]
+[ext_resource type="Script" path="res://pawn/BasicPawn.gd" id="2_1j8wx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jkpwb"]
+size = Vector3(28.6924, 0.977506, 33.3661)
+
+[node name="Hub" type="Node3D"]
+
+[node name="Floor" type="CSGBox3D" parent="."]
+size = Vector3(48.2985, 1, 33.2556)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_jkpwb")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_ghv0i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95215, 0)
+script = ExtResource("2_1j8wx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.907125, 0.420862, 0, -0.420862, 0.907125, 0, 5.10492, 4.44041)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.560755, 0.827982, 0, -0.827982, 0.560755, 0, 7.96054, 0)

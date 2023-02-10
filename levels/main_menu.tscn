@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgt8twrvbfy28"]
+
+[ext_resource type="Texture2D" uid="uid://fp5dme3c6rqp" path="res://ui/title.png" id="1_2uy0r"]
+[ext_resource type="Script" path="res://scripts/Play.gd" id="2_qxjwb"]
+[ext_resource type="Texture2D" uid="uid://boojvnt7aoe7m" path="res://ui/features_image.png" id="3_o5ojv"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+
+[node name="TitleLogo" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+texture = ExtResource("1_2uy0r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../Credits")
+focus_neighbor_bottom = NodePath("../Settings")
+focus_next = NodePath("../Settings")
+focus_previous = NodePath("../Credits")
+text = "Play Game"
+script = ExtResource("2_qxjwb")
+
+[node name="Settings" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Credits")
+focus_next = NodePath("../Credits")
+focus_previous = NodePath("../Play")
+text = "Settings"
+
+[node name="Credits" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+size_flags_vertical = 3
+focus_neighbor_top = NodePath("../Settings")
+focus_neighbor_bottom = NodePath("../Play")
+focus_next = NodePath("../Play")
+focus_previous = NodePath("../Settings")
+text = "Credits
+"
+
+[node name="Version" type="Label" parent="HBoxContainer/VBoxContainer"]
+text = "Pre Alpha 0.1"
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+
+[node name="MainMenuIllustration" type="TextureRect" parent="HBoxContainer/CenterContainer"]
+texture = ExtResource("3_o5ojv")
