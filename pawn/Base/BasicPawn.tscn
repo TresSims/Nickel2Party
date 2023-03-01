@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://btti8lad77gee"]
+[gd_scene load_steps=4 format=3 uid="uid://cvm4w1t5gy17r"]
 
-[ext_resource type="Texture2D" uid="uid://3rwystpxgwl1" path="res://pawn/ASprite.png" id="1_rll4q"]
+[ext_resource type="Script" path="res://pawn/Base/BasicPawn.gd" id="1_vg8nh"]
+[ext_resource type="Texture2D" uid="uid://3rwystpxgwl1" path="res://pawn/Base/ASprite.png" id="2_s0c8q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfhvv"]
 radius = 0.751607
@@ -8,6 +9,7 @@ height = 2.85327
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87231, 0)
+script = ExtResource("1_vg8nh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_wfhvv")
@@ -19,4 +21,4 @@ height = 0.273528
 
 [node name="Sprite3D" type="Sprite3D" parent="CSGCylinder3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40164, 0)
-texture = ExtResource("1_rll4q")
+texture = ExtResource("2_s0c8q")

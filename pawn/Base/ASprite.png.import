@@ -3,24 +3,23 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3rwystpxgwl1"
-path.s3tc="res://.godot/imported/ASprite.png-16af2cc0ef14c0b1ec97ae3b093de900.s3tc.ctex"
-path.etc2="res://.godot/imported/ASprite.png-16af2cc0ef14c0b1ec97ae3b093de900.etc2.ctex"
+path.s3tc="res://.godot/imported/ASprite.png-4781b5430b9dab5e2b864946102a3de9.s3tc.ctex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://pawn/ASprite.png"
-dest_files=["res://.godot/imported/ASprite.png-16af2cc0ef14c0b1ec97ae3b093de900.s3tc.ctex", "res://.godot/imported/ASprite.png-16af2cc0ef14c0b1ec97ae3b093de900.etc2.ctex"]
+source_file="res://pawn/Base/ASprite.png"
+dest_files=["res://.godot/imported/ASprite.png-4781b5430b9dab5e2b864946102a3de9.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
